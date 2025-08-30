@@ -1,0 +1,12 @@
+C:\Users\cem_b\Desktop\Edit\MVC\Store\Entities\bin\Debug\net9.0\Entities.deps.json
+C:\Users\cem_b\Desktop\Edit\MVC\Store\Entities\bin\Debug\net9.0\Entities.dll
+C:\Users\cem_b\Desktop\Edit\MVC\Store\Entities\bin\Debug\net9.0\Entities.pdb
+C:\Users\cem_b\Desktop\Edit\MVC\Store\Entities\obj\Debug\net9.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cem_b\Desktop\Edit\MVC\Store\Entities\obj\Debug\net9.0\Entities.AssemblyInfoInputs.cache
+C:\Users\cem_b\Desktop\Edit\MVC\Store\Entities\obj\Debug\net9.0\Entities.AssemblyInfo.cs
+C:\Users\cem_b\Desktop\Edit\MVC\Store\Entities\obj\Debug\net9.0\Entities.csproj.CoreCompileInputs.cache
+C:\Users\cem_b\Desktop\Edit\MVC\Store\Entities\obj\Debug\net9.0\Entities.sourcelink.json
+C:\Users\cem_b\Desktop\Edit\MVC\Store\Entities\obj\Debug\net9.0\Entities.dll
+C:\Users\cem_b\Desktop\Edit\MVC\Store\Entities\obj\Debug\net9.0\refint\Entities.dll
+C:\Users\cem_b\Desktop\Edit\MVC\Store\Entities\obj\Debug\net9.0\Entities.pdb
+C:\Users\cem_b\Desktop\Edit\MVC\Store\Entities\obj\Debug\net9.0\ref\Entities.dll

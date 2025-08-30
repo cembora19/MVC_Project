@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "kDwxbQolMEEikaPxHKLYUABOUJJqqFJcpyVyiNx3zYI=",
+  "Hash": "zAPZFDH3HamMlegbEthhSEp2OG+HqUuxUTVNVfwpBH0=",
   "Source": "StoreApp",
   "BasePath": "_content/StoreApp",
   "Mode": "Default",
@@ -1947,6 +1947,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\html\\Error.html"
+    },
+    {
+      "Identity": "C:\\Users\\cem_b\\Desktop\\Edit\\MVC\\Store\\StoreApp\\wwwroot\\images\\default.jpeg",
+      "SourceId": "StoreApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cem_b\\Desktop\\Edit\\MVC\\Store\\StoreApp\\wwwroot\\",
+      "BasePath": "_content/StoreApp",
+      "RelativePath": "images/default#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "s9ple4iepm",
+      "Integrity": "0I4Ht1+a4df6Yksxk7sMGmfxLasGGNghF0Cvfhyqf/g=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\default.jpeg"
     },
     {
       "Identity": "C:\\Users\\cem_b\\Desktop\\Edit\\MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",
@@ -6407,6 +6428,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-+txujftXT8YriVyS/TlwshuRpqxYQ9H1HBkbugQmgZE="
+        }
+      ]
+    },
+    {
+      "Route": "images/default.jpeg",
+      "AssetFile": "C:\\Users\\cem_b\\Desktop\\Edit\\MVC\\Store\\StoreApp\\wwwroot\\images\\default.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "370213"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0I4Ht1+a4df6Yksxk7sMGmfxLasGGNghF0Cvfhyqf/g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 Aug 2025 16:06:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0I4Ht1+a4df6Yksxk7sMGmfxLasGGNghF0Cvfhyqf/g="
+        }
+      ]
+    },
+    {
+      "Route": "images/default.s9ple4iepm.jpeg",
+      "AssetFile": "C:\\Users\\cem_b\\Desktop\\Edit\\MVC\\Store\\StoreApp\\wwwroot\\images\\default.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "370213"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0I4Ht1+a4df6Yksxk7sMGmfxLasGGNghF0Cvfhyqf/g=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 29 Aug 2025 16:06:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "s9ple4iepm"
+        },
+        {
+          "Name": "label",
+          "Value": "images/default.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0I4Ht1+a4df6Yksxk7sMGmfxLasGGNghF0Cvfhyqf/g="
         }
       ]
     },

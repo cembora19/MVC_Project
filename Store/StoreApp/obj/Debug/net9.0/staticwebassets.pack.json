@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\html\\Error.html"
     },
     {
+      "Id": "C:\\Users\\cem_b\\Desktop\\Edit\\MVC\\Store\\StoreApp\\wwwroot\\images\\default.jpeg",
+      "PackagePath": "staticwebassets\\images\\default.jpeg"
+    },
+    {
       "Id": "C:\\Users\\cem_b\\Desktop\\Edit\\MVC\\Store\\StoreApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

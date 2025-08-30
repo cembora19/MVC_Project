@@ -217,3 +217,8 @@ C:\Users\cem_b\Desktop\Edit\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\7r9ui
 C:\Users\cem_b\Desktop\Edit\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\f9vbit1ekj-muycvpuwrr.gz
 C:\Users\cem_b\Desktop\Edit\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\11meyrgl40-87fc7y1x7t.gz
 C:\Users\cem_b\Desktop\Edit\MVC\Store\StoreApp\obj\Debug\net9.0\compressed\omu34nzj59-5ipweew5fc.gz
+C:\Users\cem_b\Desktop\Edit\MVC\Store\StoreApp\obj\Debug\net9.0\StoreApp.sourcelink.json
+C:\Users\cem_b\Desktop\Edit\MVC\Store\StoreApp\bin\Debug\net9.0\Entities.dll
+C:\Users\cem_b\Desktop\Edit\MVC\Store\StoreApp\bin\Debug\net9.0\Entities.pdb
+C:\Users\cem_b\Desktop\Edit\MVC\Store\StoreApp\bin\Debug\net9.0\Repositories.dll
+C:\Users\cem_b\Desktop\Edit\MVC\Store\StoreApp\bin\Debug\net9.0\Repositories.pdb
