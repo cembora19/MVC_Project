@@ -1,4 +1,5 @@
-﻿using Entities.Models;
+﻿using System.Reflection.Metadata.Ecma335;
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace Repositories
@@ -25,5 +26,3 @@ namespace Repositories
         }
     }
 }
-
-
