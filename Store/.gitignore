@@ -1,0 +1,54 @@
+## Visual Studio için
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Build çıktıları
+[Bb]in/
+[Oo]bj/
+Debug/
+Release/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+## Rider / JetBrains IDE
+.idea/
+*.iml
+
+## Paketler
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+*.dll
+*.exe
+*.mdb
+*.pdb
+
+## Kullanıcıya özel ayarlar
+*.userprefs
+
+## Log dosyaları
+*.log
+
+## ASP.NET Core runtime dosyaları
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Publish çıktıları
+wwwroot/dist/
+wwwroot/node_modules/
+node_modules/
+dist/
+
+## dotenv
+.env
+
+## Mac / Linux sistem dosyaları
+.DS_Store
+Thumbs.db
