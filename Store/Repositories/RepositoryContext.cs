@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using System.Reflection.Metadata.Ecma335;
 using Entities.Models;
+using Entities.Models;
 using Microsoft.EntityFrameworkCore;
 using Repositories.Config;
 
@@ -10,6 +11,7 @@ namespace Repositories
     {
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories{ get; set; }
+        public DbSet<Order> Orders { get; set; }
         public RepositoryContext(DbContextOptions<RepositoryContext> options) : base(options)
         {
 
