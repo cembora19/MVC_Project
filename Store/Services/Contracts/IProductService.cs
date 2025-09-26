@@ -1,11 +1,15 @@
 using Entities.Dtos;
 using Entities.Models;
+using Entities.RequestParameters;
 
 namespace Services.Contracts
 {
     public interface IProductService
     {
         IEnumerable<Product> GetAllProducts(bool trachChanges);
+        IEnumerable<Product> GetAllProductsWithDetails(ProductRequestParameters p);
+
+        IEnumerable<Product> GetShowcaseProducts(bool trackChanges);
         Product? GetOneProduct(int id, bool trachChanges);
         void CreateProduct(ProductDtoForInsertion productDto);
         void UpdateOneProduct(ProductDtoForUpdate productDto);

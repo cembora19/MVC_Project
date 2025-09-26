@@ -68,101 +68,7 @@ namespace StoreApp.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Entities.Models.Product", b =>
-                {
-                    b.Property<int>("ProductId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("CategoryId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("ImageUrl")
-                        .HasColumnType("TEXT");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("ProductName")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Summary")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("ProductId");
-
-                    b.HasIndex("CategoryId");
-
-                    b.ToTable("Products");
-
-                    b.HasData(
-                        new
-                        {
-                            ProductId = 1,
-                            CategoryId = 2,
-                            ImageUrl = "/images/1.jpg",
-                            Price = 17000m,
-                            ProductName = "Computer",
-                            Summary = ""
-                        },
-                        new
-                        {
-                            ProductId = 2,
-                            CategoryId = 2,
-                            ImageUrl = "/images/2.jpg",
-                            Price = 1000m,
-                            ProductName = "Keyboard",
-                            Summary = ""
-                        },
-                        new
-                        {
-                            ProductId = 3,
-                            CategoryId = 2,
-                            ImageUrl = "/images/3.jpg",
-                            Price = 500m,
-                            ProductName = "Mouse",
-                            Summary = ""
-                        },
-                        new
-                        {
-                            ProductId = 4,
-                            CategoryId = 2,
-                            ImageUrl = "/images/4.jpg",
-                            Price = 7000m,
-                            ProductName = "Monitor",
-                            Summary = ""
-                        },
-                        new
-                        {
-                            ProductId = 5,
-                            CategoryId = 2,
-                            ImageUrl = "/images/5.jpg",
-                            Price = 1500m,
-                            ProductName = "Desk",
-                            Summary = ""
-                        },
-                        new
-                        {
-                            ProductId = 6,
-                            CategoryId = 1,
-                            ImageUrl = "/images/6.jpg",
-                            Price = 25m,
-                            ProductName = "History",
-                            Summary = ""
-                        },
-                        new
-                        {
-                            ProductId = 7,
-                            CategoryId = 1,
-                            ImageUrl = "/images/7.jpg",
-                            Price = 25m,
-                            ProductName = "Hamlet",
-                            Summary = ""
-                        });
-                });
-
-            modelBuilder.Entity("Entitites.Models.Order", b =>
+            modelBuilder.Entity("Entities.Models.Order", b =>
                 {
                     b.Property<int>("OrderId")
                         .ValueGeneratedOnAdd()
@@ -199,9 +105,143 @@ namespace StoreApp.Migrations
                     b.ToTable("Orders");
                 });
 
+            modelBuilder.Entity("Entities.Models.Product", b =>
+                {
+                    b.Property<int>("ProductId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ProductName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("ShowCase")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Summary")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("ProductId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            ProductId = 1,
+                            CategoryId = 2,
+                            ImageUrl = "/images/1.jpg",
+                            Price = 17000m,
+                            ProductName = "Computer",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 2,
+                            CategoryId = 2,
+                            ImageUrl = "/images/2.jpg",
+                            Price = 1000m,
+                            ProductName = "Keyboard",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 3,
+                            CategoryId = 2,
+                            ImageUrl = "/images/3.jpg",
+                            Price = 500m,
+                            ProductName = "Mouse",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 4,
+                            CategoryId = 2,
+                            ImageUrl = "/images/4.jpg",
+                            Price = 7000m,
+                            ProductName = "Monitor",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 5,
+                            CategoryId = 2,
+                            ImageUrl = "/images/5.jpg",
+                            Price = 1500m,
+                            ProductName = "Desk",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            CategoryId = 1,
+                            ImageUrl = "/images/6.jpg",
+                            Price = 25m,
+                            ProductName = "History",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 7,
+                            CategoryId = 1,
+                            ImageUrl = "/images/7.jpg",
+                            Price = 25m,
+                            ProductName = "Hamlet",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 8,
+                            CategoryId = 1,
+                            ImageUrl = "/images/8.jpg",
+                            Price = 2500m,
+                            ProductName = "Apple Pen",
+                            ShowCase = true,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 9,
+                            CategoryId = 2,
+                            ImageUrl = "/images/9.jpg",
+                            Price = 80m,
+                            ProductName = "Aklindan Bir Sayi Tut",
+                            ShowCase = true,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 10,
+                            CategoryId = 1,
+                            ImageUrl = "/images/10.jpg",
+                            Price = 8000m,
+                            ProductName = "Logitech G29",
+                            ShowCase = true,
+                            Summary = ""
+                        });
+                });
+
             modelBuilder.Entity("Entities.Models.CartLine", b =>
                 {
-                    b.HasOne("Entitites.Models.Order", null)
+                    b.HasOne("Entities.Models.Order", null)
                         .WithMany("Lines")
                         .HasForeignKey("OrderId");
 
@@ -228,7 +268,7 @@ namespace StoreApp.Migrations
                     b.Navigation("Products");
                 });
 
-            modelBuilder.Entity("Entitites.Models.Order", b =>
+            modelBuilder.Entity("Entities.Models.Order", b =>
                 {
                     b.Navigation("Lines");
                 });
