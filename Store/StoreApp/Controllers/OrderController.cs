@@ -1,9 +1,10 @@
 using Entities.Models;
 using Entities.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Contracts;
 
-namespace StoreApp.controllers
+namespace StoreApp.Controllers
 {
     public class OrderController : Controller
     {
@@ -15,6 +16,7 @@ namespace StoreApp.controllers
             _manager = manager;
             _cart = cart;
         }
+        [Authorize]
         public ViewResult Checkout() => View(new Order());
 
         [HttpPost]

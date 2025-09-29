@@ -6,7 +6,7 @@ using Repositories.Contracts;
 using Services.Contracts;
 using StoreApp.Models;
 
-namespace StoreApp.controllers
+namespace StoreApp.Controllers
 {
     public class ProductController : Controller
     {

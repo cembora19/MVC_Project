@@ -1,5 +1,9 @@
 using Entities.Models;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.Extensions.Options;
 using Repositories;
 using Repositories.Contracts;
 using Services;
@@ -14,10 +18,30 @@ namespace StoreApp.Infrastructure.Extensions
         {
             services.AddDbContext<RepositoryContext>(options =>
                 {
-                    options.UseSqlite(configuration.GetConnectionString("sqlconnection"), b => b.MigrationsAssembly("StoreApp"));
+                    options.UseSqlite(configuration.GetConnectionString("sqlconnection"),
+                        b => b.MigrationsAssembly("StoreApp"));
+                    options.EnableSensitiveDataLogging(true);
+
+                    //dotnet 9.0 version da hata almamak için ekledim 
+                    options.ConfigureWarnings(w =>
+                        w.Ignore(RelationalEventId.PendingModelChangesWarning));
                 });
         }
 
+        public static void ConfigureIdentity(this IServiceCollection services)
+        {
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.User.RequireUniqueEmail = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredLength = 1;
+            })
+            .AddEntityFrameworkStores<RepositoryContext>();
+        }
 
         public static void ConfigureSession(this IServiceCollection services)
         {
@@ -45,11 +69,25 @@ namespace StoreApp.Infrastructure.Extensions
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<IOrderService, OrderManager>();
+            services.AddScoped<IAuthService, AuthManager>();
+        }
+
+        public static void ConfigureApplicationCookie(this IServiceCollection services)
+        {
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = new PathString("/Account/Login");
+                options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+                options.AccessDeniedPath = new PathString("/Account/AccessDenied");
+            });
+                
+            
         }
 
         public static void ConfigureRouting(this IServiceCollection services)
         {
-            services.AddRouting(options=>
+            services.AddRouting(options =>
             {
                 options.LowercaseUrls = true;
                 options.AppendTrailingSlash = false;

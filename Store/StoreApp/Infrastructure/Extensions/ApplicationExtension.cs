@@ -1,3 +1,5 @@
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Repositories;
 
@@ -5,7 +7,7 @@ namespace StoreApp.Infrastructure.Extensions
 {
     public static class ApplicationExtension
     {
-        public static void ConfigureAndCheckMigration(this IApplicationBuilder app)
+        public static async void ConfigureAndCheckMigration(this IApplicationBuilder app)
         {
             RepositoryContext context = app
                 .ApplicationServices
@@ -26,6 +28,53 @@ namespace StoreApp.Infrastructure.Extensions
                     .AddSupportedUICultures("tr-TR")
                     .SetDefaultCulture("tr_TR");
             });
+        }
+
+        public static async Task ConfigureDefaultAdminUser(this IApplicationBuilder app)
+        {
+            const string adminUser = "Admin";
+            const string adminPassword = "Admin+123456";
+
+            //User Manager
+            UserManager<IdentityUser> userManager = app
+                .ApplicationServices
+                .CreateScope()
+                .ServiceProvider
+                .GetRequiredService<UserManager<IdentityUser>>();
+
+            //Role Manager
+            RoleManager<IdentityRole> roleManager = app
+                .ApplicationServices
+                .CreateAsyncScope()
+                .ServiceProvider
+                .GetRequiredService<RoleManager<IdentityRole>>();
+
+            IdentityUser? user = await userManager.FindByNameAsync(adminUser);
+            if (user is null)
+            {
+                user = new IdentityUser()
+                {
+                    Email = "cemboraceylan@gmail.com",
+                    PhoneNumber = "5418638056",
+                    UserName = adminUser
+                };
+                var result = await userManager.CreateAsync(user, adminPassword);
+
+                if (!result.Succeeded)
+                {
+                    throw new Exception("Admin user could not created.");
+                }
+                var roleResult = await userManager.AddToRolesAsync(user,
+                    roleManager
+                        .Roles
+                        .Select(r => r.Name!)
+                        .ToList()
+                        );
+                if (!roleResult.Succeeded)
+                {
+                    throw new Exception("System have problems with role defination for admin.");
+                }
+            }
         }
     }
 }
