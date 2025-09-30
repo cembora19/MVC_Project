@@ -10,6 +10,7 @@ namespace StoreApp.Areas.Admin.controllers
     {
         public IActionResult Index()
         {
+            TempData["info"] = $"Welcome back, {DateTime.Now.ToShortDateString()}";
             return View();
         }
     }

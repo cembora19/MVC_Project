@@ -11,8 +11,8 @@ using Repositories;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20250927133319_IdentityRoleSeedData")]
-    partial class IdentityRoleSeedData
+    [Migration("20250930155319_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -270,19 +270,19 @@ namespace StoreApp.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "fb8e6ecb-83d4-4d83-89c7-321f33c91fee",
+                            Id = "afa3f700-4fed-4761-a6dc-78f4cb1319c1",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "32470899-cb14-4172-8726-1cabf9783853",
+                            Id = "b337639c-cae3-4c5e-a600-5a8efcb80cce",
                             Name = "Editor",
                             NormalizedName = "EDITOR"
                         },
                         new
                         {
-                            Id = "61fd0b4f-340d-4dbd-abb8-4df304436ee7",
+                            Id = "91391de6-4f50-4e5d-ae13-dbe0100c8dd0",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
